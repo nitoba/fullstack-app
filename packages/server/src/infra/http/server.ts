@@ -3,7 +3,7 @@ import fastify from 'fastify'
 import { appRouter } from './trpc/root'
 import { createTRPCContext } from './trpc/trpc'
 import cors from '@fastify/cors'
-import { env } from '@/lib/env'
+import { env } from '../../lib/env'
 
 export interface ServerOptions {
   dev?: boolean
