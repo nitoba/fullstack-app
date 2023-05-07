@@ -4,7 +4,7 @@ import { httpBatchLink, loggerLink } from '@trpc/client'
 import { createTRPCNext } from '@trpc/next'
 
 function getBaseUrl() {
-  const baseUrl = process.env.API_URL
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL
   return baseUrl ?? `http://localhost:3333`
 }
 
