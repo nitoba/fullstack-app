@@ -7,12 +7,11 @@ import { env } from '../../lib/env'
 
 export interface ServerOptions {
   dev?: boolean
-  port?: number
   prefix?: string
 }
 
 export function createServer(opts: ServerOptions) {
-  const port = opts.port ?? 3333
+  const port = env.PORT
   const prefix = opts.prefix ?? '/trpc'
   const server = fastify()
 

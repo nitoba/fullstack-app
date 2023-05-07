@@ -1,10 +1,11 @@
-import type { AppRouter } from '../../../server/src/trpc/root'
+import type { AppRouter } from '../../../server/src/infra/http/trpc/root'
 import superjson from 'superjson'
 import { httpBatchLink, loggerLink } from '@trpc/client'
 import { createTRPCNext } from '@trpc/next'
 
 function getBaseUrl() {
-  return `http://localhost:3333`
+  const baseUrl = process.env.API_URL
+  return baseUrl ?? `http://localhost:3333`
 }
 
 export const trpc = createTRPCNext<AppRouter>({
