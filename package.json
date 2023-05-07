@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:server": "cd packages/server && pnpm install && cd ../../",
+    "build:server": "cd packages/server && pnpm run build && cd ../../",
+    "start:server": "cd packages/server && pnpm run start",
+    "build:web": "cd packages/web && pnpm run start && cd ../../",
+    "install:web": "cd packages/web && pnpm run start && cd ../../",
+    "start:web": "cd packages/web && pnpm run start"
   },
   "workspaces": [
     "packages/*"
